@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   💰 Mentalidade Milionária - 10 Ebooks
+  </title>
+  <style>
+   * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: #000000;
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Section */
+        .hero {
+            text-align: center;
+            padding: 80px 0;
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: bold;
+            color: #FFD700;
+            margin-bottom: 20px;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+            animation: glow 2s ease-in-out infinite alternate;
+            position: relative;
+            z-index: 2;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 20px rgba(255, 215, 0, 0.5); }
+            to { text-shadow: 0 0 40px rgba(255, 215, 0, 0.8); }
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            margin-bottom: 40px;
+            color: #cccccc;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Benefits Section */
+        .benefits {
+            padding: 60px 0;
+            background: #111111;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: #FFD700;
+            text-align: center;
+            margin-bottom: 50px;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+            border-radius: 15px;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            animation: slideInUp 0.6s ease-out;
+        }
+
+        .benefit-item:hover {
+            border-color: #FFD700;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+        }
+
+        .checkmark {
+            font-size: 2rem;
+            color: #FFD700;
+            margin-right: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .benefit-text {
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        /* Ebooks Section */
+        .ebooks {
+            padding: 80px 0;
+            background: #000000;
+        }
+
+        .ebooks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .ebook-card {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid #333;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ebook-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .ebook-card:hover::before {
+            left: 100%;
+        }
+
+        .ebook-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(255, 215, 0, 0.1);
+            border-color: #FFD700;
+        }
+
+        .ebook-title {
+            font-size: 1.4rem;
+            color: #FFD700;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .ebook-description {
+            color: #cccccc;
+            line-height: 1.6;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 80px 0;
+            background: #111111;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .testimonial {
+            background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 4px solid #FFD700;
+            position: relative;
+        }
+
+        .testimonial::before {
+            content: '"';
+            font-size: 4rem;
+            color: #FFD700;
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            opacity: 0.3;
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: #cccccc;
+        }
+
+        .testimonial-author {
+            color: #FFD700;
+            font-weight: bold;
+        }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 80px 0;
+            background: #000000;
+            text-align: center;
+        }
+
+        .price-container {
+            display: inline-block;
+            margin: 40px 0;
+        }
+
+        .old-price {
+            font-size: 2rem;
+            color: #666;
+            text-decoration: line-through;
+            margin-bottom: 10px;
+        }
+
+        .new-price {
+            font-size: 4rem;
+            color: #FFD700;
+            font-weight: bold;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+        }
+
+        /* CTA Section */
+        .cta {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+            text-align: center;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 25px 50px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #000000;
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+            animation: buttonPulse 2s infinite;
+            margin-bottom: 30px;
+        }
+
+        @keyframes buttonPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.5);
+        }
+
+        /* Timer */
+        .timer {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .timer-box {
+            background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+            padding: 20px;
+            border-radius: 15px;
+            border: 2px solid #FFD700;
+            text-align: center;
+            min-width: 80px;
+        }
+
+        .timer-number {
+            font-size: 2rem;
+            color: #FFD700;
+            font-weight: bold;
+            display: block;
+        }
+
+        .timer-label {
+            font-size: 0.9rem;
+            color: #cccccc;
+            margin-top: 5px;
+        }
+
+        .urgency-text {
+            color: #ff6b6b;
+            font-size: 1.1rem;
+            margin-top: 20px;
+            font-weight: 500;
+        }
+
+        /* Animations */
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+
+        /* Responsive Design */
+
+    /* Ajustes adicionais para melhor mobile experience */
+    body {
+        word-wrap: break-word;
+        overflow-x: hidden;
+    }
+
+    .hero-title, .hero-subtitle, .section-title {
+        padding: 0 15px;
+    }
+
+    .benefit-text, .ebook-description, .testimonial-text {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        min-width: 90%;
+        max-width: 400px;
+    }
+
+    .cta-button, .timer-number {
+        font-size: 1.3rem;
+    }
+
+    .cta .urgency-text {
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+
+    .testimonials-grid, .ebooks-grid, .benefits-grid {
+        gap: 20px;
+    }
+
+    .ebook-card, .testimonial, .benefit-item {
+        padding: 20px !important;
+    }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 50px 0;
+            }
+            
+            .benefits-grid,
+            .ebooks-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .timer {
+                gap: 10px;
+            }
+            
+            .timer-box {
+                padding: 15px 10px;
+                min-width: 60px;
+            }
+            
+            .timer-number {
+                font-size: 1.5rem;
+            }
+            
+            .cta-button {
+                padding: 20px 30px;
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .ebook-card,
+            .testimonial {
+                padding: 20px;
+            }
+        }
+  </style>
+ </head>
+ <body>
+  <!-- Hero Section -->
+  <section class="hero">
+   <div class="container">
+    <h1 class="hero-title">
+     💰 Desbloqueie Sua Mente Milionária Agora
+    </h1>
+    <p class="hero-subtitle">
+     10 Ebooks para transformar sua forma de pensar, agir e ganhar dinheiro.
+    </p>
+   </div>
+   
+  </section>
+  <!-- Benefits Section -->
+  <section class="benefits">
+   <div class="container">
+    <h2 class="section-title">
+     O Que Você Vai Conquistar
+    </h2>
+    <div class="benefits-grid">
+     <div class="benefit-item fade-in">
+      <span class="checkmark">
+       ✓
+      </span>
+      <span class="benefit-text">
+       Reprogramação de crenças limitantes
+      </span>
+     </div>
+     <div class="benefit-item fade-in">
+      <span class="checkmark">
+       ✓
+      </span>
+      <span class="benefit-text">
+       Estratégias mentais usadas por milionários
+      </span>
+     </div>
+     <div class="benefit-item fade-in">
+      <span class="checkmark">
+       ✓
+      </span>
+      <span class="benefit-text">
+       Acesso imediato aos ebooks
+      </span>
+     </div>
+     <div class="benefit-item fade-in">
+      <span class="checkmark">
+       ✓
+      </span>
+      <span class="benefit-text">
+       Garantia de 7 dias
+      </span>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Ebooks Section -->
+  <section class="ebooks">
+   <div class="container">
+    <h2 class="section-title">
+     Os 10 Ebooks Que Vão Transformar Sua Vida
+    </h2>
+    <div class="ebooks-grid">
+     <div class="ebook-card">
+      <h3 class="ebook-title">
+       1. O Código da Riqueza
+      </h3>
+      <p class="ebook-description">
+       Aprenda os princípios mentais por trás da liberdade financeira e como os milionários pensam diferente.
+      </p>
+     </div>
+     <div class="ebook-card">
+      <h3 class="ebook-title">
+       2. Mindset Milionário
+      </h3>
+      <p class="ebook-description">
+       Descubra como reprogramar sua mente para atrair abundância e oportunidades de riqueza.
+      </p>
+     </div>
+     <div class="ebook-card">
+      <h3 class="ebook-title">
+       3. Crenças Limitantes Zero
+      </h3>
+      <p class="ebook-description">
+       Elimine as barreiras mentais que impedem seu crescimento financeiro e pessoal.
+      </p>
+     </div>
+     <div class="ebook-card">
+      <h3 class="ebook-title">
+       4. A Psicologia do Dinheiro
+      </h3>
+      <p class="ebook-description">
+       Entenda sua relação com o dinheiro e transforme padrões sabotadores em hábitos vencedores.
+      </p>
+     </div>
+     <div class="ebook-card">
+      <h3 class="ebook-title">
+       5. Hábitos dos Milionários
+      </h3>
+      <p class="ebook-description">
+       Implemente as rotinas diárias que levaram pessoas comuns ao sucesso extraordinário.
+      </p>
+     </div>
+     <div class="ebook-card">
+      <h3 class="ebook-title">
+       6. Visualização para a Riqueza
+      </h3>
+      <p class="ebook-description">
+       Técnicas avançadas de visualização para materializar seus objetivos financeiros.
+      </p>
+     </div>
+     <div class="ebook-card">
+      <h3 class="ebook-title">
+       7. Inteligência Emocional Financeira
+      </h3>
+      <p class="ebook-description">
+       Desenvolva o controle emocional necessário para tomar decisões financeiras inteligentes.
+      </p>
+     </div>
+     <div class="ebook-card">
+      <h3 class="ebook-title">
+       8. O Poder da Gratidão
+      </h3>
+      <p class="ebook-description">
+       Como a gratidão pode acelerar sua jornada rumo à prosperidade e abundância.
+      </p>
+     </div>
+     <div class="ebook-card">
+      <h3 class="ebook-title">
+       9. Networking Milionário
+      </h3>
+      <p class="ebook-description">
+       Construa relacionamentos estratégicos que abrem portas para oportunidades de ouro.
+      </p>
+     </div>
+     <div class="ebook-card">
+      <h3 class="ebook-title">
+       10. Ação Consistente
+      </h3>
+      <p class="ebook-description">
+       O segredo para manter a disciplina e persistência necessárias para alcançar a riqueza.
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+   <div class="container">
+    <h2 class="section-title">
+     O Que Nossos Leitores Dizem
+    </h2>
+    <div class="testimonials-grid">
+     <div class="testimonial">
+      <img alt="Foto do cliente" src="https://randomuser.me/api/portraits/women/44.jpg" style="width:50px;height:50px;border-radius:50%;object-fit:cover;margin-bottom:15px;display:block;"/>
+      <p class="testimonial-text">
+       Esses ebooks mudaram completamente minha mentalidade. Em 3 meses, consegui aumentar minha renda em 150%. A transformação mental é real!
+      </p>
+      <p class="testimonial-author">
+       - Marina Silva, Empreendedora
+      </p>
+     </div>
+     <div class="testimonial">
+      <img alt="Foto do cliente" src="https://randomuser.me/api/portraits/men/36.jpg" style="width:50px;height:50px;border-radius:50%;object-fit:cover;margin-bottom:15px;display:block;"/>
+      <p class="testimonial-text">
+       Finalmente entendi porque sempre sabotava meus resultados financeiros. Após aplicar as técnicas, meu negócio decolou de verdade.
+      </p>
+      <p class="testimonial-author">
+       - Carlos Mendes, Consultor
+      </p>
+     </div>
+     <div class="testimonial">
+      <img alt="Foto do cliente" src="https://randomuser.me/api/portraits/women/65.jpg" style="width:50px;height:50px;border-radius:50%;object-fit:cover;margin-bottom:15px;display:block;"/>
+      <p class="testimonial-text">
+       O investimento foi mínimo comparado ao retorno. Esses conhecimentos valem muito mais que o preço cobrado. Recomendo de olhos fechados!
+      </p>
+      <p class="testimonial-author">
+       - Ana Paula, Investidora
+      </p>
+     </div>
+     <div class="testimonial">
+      <img alt="Foto do cliente" src="https://randomuser.me/api/portraits/men/22.jpg" style="width:50px;height:50px;border-radius:50%;object-fit:cover;margin-bottom:15px;display:block;"/>
+      <p class="testimonial-text">
+       Quebrei barreiras mentais que carregava há anos. Hoje tenho uma relação saudável com o dinheiro e meus resultados comprovam isso.
+      </p>
+      <p class="testimonial-author">
+       - Roberto Lima, Coach
+      </p>
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- Pricing Section -->
+  <section class="pricing">
+   <div class="container">
+    <h2 class="section-title">
+     Oferta Especial Por Tempo Limitado
+    </h2>
+    <div class="price-container">
+     <div class="old-price">
+      De: R$ 197,00
+     </div>
+     <div class="new-price">
+      Por: R$ 27,90
+     </div>
+    </div>
+   </div>
+  </section>
+  <!-- CTA Section -->
+  <section class="cta">
+   <div class="container">
+    <a class="cta-button" href="#">
+     🚀 QUERO TRANSFORMAR MINHA MENTE AGORA
+    </a>
+    <div class="timer" id="timer">
+     <div class="timer-box">
+      <span class="timer-number" id="minutes">
+       15
+      </span>
+      <span class="timer-label">
+       MIN
+      </span>
+     </div>
+     <div class="timer-box">
+      <span class="timer-number" id="seconds">
+       00
+      </span>
+      <span class="timer-label">
+       SEG
+      </span>
+     </div>
+    </div>
+    <p class="urgency-text">
+     ⚠️ Essa oferta é por tempo limitado. Após o tempo acabar, o valor poderá voltar ao normal.
+    </p>
+   </div>
+   
+  </section>
+  <script>
+   // Timer Countdown
+        function startTimer() {
+            let timeLeft = 15 * 60; // 15 minutes in seconds
+            
+            const timer = setInterval(() => {
+                const minutes = Math.floor(timeLeft / 60);
+                const seconds = timeLeft % 60;
+                
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+                
+                if (timeLeft <= 0) {
+                    clearInterval(timer);
+                    // Reset timer when it reaches zero
+                    startTimer();
+                }
+                
+                timeLeft--;
+            }, 1000);
+        }
+
+        // Start timer when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            startTimer();
+            
+            // Add fade-in animation to elements as they come into view
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            
+            // Observe all cards and sections
+            document.querySelectorAll('.ebook-card, .testimonial, .benefit-item').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+        });
+
+        // Smooth scrolling for CTA button
+        document.querySelector('.cta-button').addEventListener('click', function(e) {
+            e.preventDefault();
+            // Add your purchase/redirect logic here
+            alert('Redirecionando para o checkout...');
+        });
+
+        // Add sparkle effect on mouse move
+        document.addEventListener('mousemove', function(e) {
+            if (Math.random() > 0.98) {
+                createSparkle(e.clientX, e.clientY);
+            }
+        });
+
+        function createSparkle(x, y) {
+            const sparkle = document.createElement('div');
+            sparkle.style.position = 'fixed';
+            sparkle.style.left = x + 'px';
+            sparkle.style.top = y + 'px';
+            sparkle.style.width = '4px';
+            sparkle.style.height = '4px';
+            sparkle.style.background = '#FFD700';
+            sparkle.style.borderRadius = '50%';
+            sparkle.style.pointerEvents = 'none';
+            sparkle.style.animation = 'sparkleAnimation 1s ease-out forwards';
+            sparkle.style.zIndex = '9999';
+            
+            document.body.appendChild(sparkle);
+            
+            setTimeout(() => {
+                sparkle.remove();
+            }, 1000);
+        }
+
+        // Add sparkle animation
+        const sparkleStyle = document.createElement('style');
+        sparkleStyle.textContent = `
+            @keyframes sparkleAnimation {
+                0% {
+                    opacity: 1;
+                    transform: scale(0) rotate(0deg);
+                }
+                50% {
+                    opacity: 1;
+                    transform: scale(1) rotate(180deg);
+                }
+                100% {
+                    opacity: 0;
+                    transform: scale(0) rotate(360deg);
+                }
+            }
+        `;
+        document.head.appendChild(sparkleStyle);
+  </script>
+ </body>
+</html>
